@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env/
+*.egg-info/
+data/
+*.npy
+*.json
+!data/README.md
+.DS_Store
+.env
