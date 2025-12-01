@@ -1,7 +1,8 @@
-from . import data
-from . import embedding
-from . import detector
-from . import clustering
-from . import evaluation
+# New modular structure uses src/dedupe_detector/
+# Old modules (embedding.py, detector.py, etc.) are deprecated
+# Import from src.dedupe_detector instead
 
-__all__ = ["data", "embedding", "detector", "clustering", "evaluation"]
+from . import dedupe_detector
+
+__all__ = ["dedupe_detector"]
+

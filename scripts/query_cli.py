@@ -1,10 +1,14 @@
 #!/usr/bin/env python
-import json
+import json, sys
 from pathlib import Path
+
+# Add project root to path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 import numpy as np
-from dedupe_detector.embed import Embedder
-from dedupe_detector.index import NumpyCosineIndex as FaissIndex
-from dedupe_detector.detection import Detector
+from src.dedupe_detector.embed import Embedder
+from src.dedupe_detector.index import NumpyCosineIndex as FaissIndex
+from src.dedupe_detector.detection import Detector
 
 DATA = Path("data")
 
