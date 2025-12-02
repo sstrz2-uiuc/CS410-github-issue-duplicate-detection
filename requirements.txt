@@ -7,4 +7,3 @@ pandas
 rich
 scipy
 scikit-learn
-matplotlib
