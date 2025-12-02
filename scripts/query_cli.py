@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 import json, sys
 from pathlib import Path
+import numpy as np
 
-# Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-import numpy as np
 from src.dedupe_detector.embed import Embedder
 from src.dedupe_detector.index import NumpyCosineIndex as FaissIndex
 from src.dedupe_detector.detection import Detector

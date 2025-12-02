@@ -1,17 +1,15 @@
 #!/usr/bin/env python
 import json, os, sys
 from pathlib import Path
+from tqdm import tqdm
 
-# Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from tqdm import tqdm
 from src.dedupe_detector.github_client import GitHubClient
 from src.dedupe_detector.preprocess import clean_text
 from src.dedupe_detector.embed import Embedder
 #from src.dedupe_detector.index import FaissIndex
 from src.dedupe_detector.index import NumpyCosineIndex as FaissIndex
-
 
 DATA = Path("data")
 
