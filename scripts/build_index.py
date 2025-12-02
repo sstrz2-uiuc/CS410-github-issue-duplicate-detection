@@ -1,13 +1,15 @@
 #!/usr/bin/env python
-import json, os
+import json, os, sys
 from pathlib import Path
 from tqdm import tqdm
-from dedupe_detector.github_client import GitHubClient
-from dedupe_detector.preprocess import clean_text
-from dedupe_detector.embed import Embedder
-#from dedupe_detector.index import FaissIndex
-from dedupe_detector.index import NumpyCosineIndex as FaissIndex
 
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from src.dedupe_detector.github_client import GitHubClient
+from src.dedupe_detector.preprocess import clean_text
+from src.dedupe_detector.embed import Embedder
+#from src.dedupe_detector.index import FaissIndex
+from src.dedupe_detector.index import NumpyCosineIndex as FaissIndex
 
 DATA = Path("data")
 

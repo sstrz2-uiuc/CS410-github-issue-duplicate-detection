@@ -5,3 +5,5 @@ faiss-cpu
 numpy
 pandas
 rich
+scipy
+scikit-learn
