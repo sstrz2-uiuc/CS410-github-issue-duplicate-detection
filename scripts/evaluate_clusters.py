@@ -36,8 +36,7 @@ def load_index():
 # list of issues and find duplicate pairs (live)
 def build_gold(repo: str):
     gh = GitHubClient(repo)
-    issues = gh.fetch_issues(state="all", max_pages=50)
-    
+    issues = gh.fetch_issues(state="all", max_pages=60)
     num_to_dupes = {}
     for issue in tqdm(issues, desc="parse dupes"):
         issue_num = issue["number"]

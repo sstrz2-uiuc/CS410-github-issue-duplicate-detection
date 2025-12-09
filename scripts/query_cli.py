@@ -24,7 +24,8 @@ def main():
     body = input("Enter body (optional): ").strip()
     res = det.query(title, body, k=5)
     for r in res:
-        m = r["meta"]
+        issue_num = str(r['issue_number'])
+        m = meta.get(issue_num, {})
         print(f"#{r['issue_number']} | {r['score']:.3f} | {m.get('title','')}\n  {m.get('html_url','')}\n")
 
 if __name__ == "__main__":
